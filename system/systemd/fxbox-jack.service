@@ -1,0 +1,21 @@
+[Unit]
+Description=FXBox JACK audio server
+After=sound.target fxbox-mixer.service fxbox-tune.service
+Wants=fxbox-mixer.service fxbox-tune.service
+# Keep retrying, e.g. while the sound card is missing.
+StartLimitIntervalSec=0
+
+[Service]
+User=fxbox
+Group=audio
+EnvironmentFile=/etc/fxbox/audio.conf
+Environment=JACK_NO_AUDIO_RESERVATION=1
+LimitRTPRIO=95
+LimitMEMLOCK=infinity
+CPUAffinity=2 3
+ExecStart=/usr/bin/jackd -R -P ${JACK_PRIO} -t 2000 -d alsa -d hw:${ALSA_CARD} -r ${SAMPLE_RATE} -p ${PERIOD} -n ${NPERIODS} -i 2 -o 2 $JACK_EXTRA
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

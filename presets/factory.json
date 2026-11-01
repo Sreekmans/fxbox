@@ -1,0 +1,837 @@
+{
+ "version": 2,
+ "comment": "Fabriekspresets. Een preset is een keten: 'chain' bevat de effecten die aan staan (in vaste volgorde Filter > Saturation > Distortion > Chorus > Phaser > Tape Echo > Reverb), 'focus' welk effect op het scherm staat. Oude presets met 'fx' (één effect) worden ook gelezen. Waarden in fysieke eenheden: time/predelay in ms, decay in s, rate/cutoff in Hz, level in dB, overige 0..1. 'divs' geldt wanneer sync aan staat.",
+ "banks": [
+  {
+   "id": "F1",
+   "name": "Basis",
+   "presets": [
+    {
+     "name": "Slapback",
+     "fx": "tape",
+     "params": {
+      "time": 110,
+      "feedback": 0.12,
+      "mix": 0.32,
+      "wow": 0.08
+     },
+     "divs": {
+      "time": "1/16"
+     }
+    },
+    {
+     "name": "Kwart echo",
+     "fx": "tape",
+     "params": {
+      "time": 500,
+      "feedback": 0.35,
+      "mix": 0.3,
+      "wow": 0.12
+     },
+     "divs": {
+      "time": "1/4"
+     }
+    },
+    {
+     "name": "Kamer",
+     "fx": "reverb",
+     "params": {
+      "decay": 0.8,
+      "tone": 0.55,
+      "mix": 0.25,
+      "predelay": 8
+     }
+    },
+    {
+     "name": "Zaal",
+     "fx": "reverb",
+     "params": {
+      "decay": 2.8,
+      "tone": 0.5,
+      "mix": 0.3,
+      "predelay": 24
+     }
+    },
+    {
+     "name": "Subtiel koor",
+     "fx": "chorus",
+     "params": {
+      "rate": 0.6,
+      "depth": 0.35,
+      "mix": 0.4,
+      "feedback": 0.0
+     },
+     "divs": {
+      "rate": "1/1"
+     }
+    },
+    {
+     "name": "Trage phaser",
+     "fx": "phaser",
+     "params": {
+      "rate": 0.25,
+      "depth": 0.65,
+      "mix": 0.5,
+      "feedback": 0.3
+     },
+     "divs": {
+      "rate": "2/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "F2",
+   "name": "Dub & Space",
+   "presets": [
+    {
+     "name": "Dub echo",
+     "fx": "tape",
+     "params": {
+      "time": 375,
+      "feedback": 0.62,
+      "mix": 0.42,
+      "wow": 0.25
+     },
+     "divs": {
+      "time": "1/8D"
+     }
+    },
+    {
+     "name": "Space echo",
+     "fx": "tape",
+     "params": {
+      "time": 500,
+      "feedback": 0.72,
+      "mix": 0.4,
+      "wow": 0.45
+     },
+     "divs": {
+      "time": "1/4"
+     }
+    },
+    {
+     "name": "Triool tik",
+     "fx": "tape",
+     "params": {
+      "time": 333,
+      "feedback": 0.45,
+      "mix": 0.35,
+      "wow": 0.1
+     },
+     "divs": {
+      "time": "1/4T"
+     }
+    },
+    {
+     "name": "Plaat",
+     "fx": "reverb",
+     "params": {
+      "decay": 1.6,
+      "tone": 0.8,
+      "mix": 0.32,
+      "predelay": 12
+     }
+    },
+    {
+     "name": "Dub phaser",
+     "fx": "phaser",
+     "params": {
+      "rate": 0.12,
+      "depth": 0.85,
+      "mix": 0.5,
+      "feedback": 0.6
+     },
+     "divs": {
+      "rate": "4/1"
+     }
+    },
+    {
+     "name": "Draaikolk",
+     "fx": "chorus",
+     "params": {
+      "rate": 0.25,
+      "depth": 0.75,
+      "mix": 0.55,
+      "feedback": 0.45
+     },
+     "divs": {
+      "rate": "2/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "F3",
+   "name": "Ambient",
+   "presets": [
+    {
+     "name": "Eindeloos",
+     "fx": "tape",
+     "params": {
+      "time": 1000,
+      "feedback": 0.88,
+      "mix": 0.45,
+      "wow": 0.3
+     },
+     "divs": {
+      "time": "1/2"
+     }
+    },
+    {
+     "name": "Lange staart",
+     "fx": "tape",
+     "params": {
+      "time": 750,
+      "feedback": 0.76,
+      "mix": 0.4,
+      "wow": 0.5
+     },
+     "divs": {
+      "time": "1/4D"
+     }
+    },
+    {
+     "name": "Wolk",
+     "fx": "reverb",
+     "params": {
+      "decay": 9.0,
+      "tone": 0.35,
+      "mix": 0.55,
+      "predelay": 60
+     }
+    },
+    {
+     "name": "Kathedraal",
+     "fx": "reverb",
+     "params": {
+      "decay": 14.0,
+      "tone": 0.25,
+      "mix": 0.5,
+      "predelay": 90
+     }
+    },
+    {
+     "name": "Breed koor",
+     "fx": "chorus",
+     "params": {
+      "rate": 0.18,
+      "depth": 0.8,
+      "mix": 0.55,
+      "feedback": 0.2
+     },
+     "divs": {
+      "rate": "4/1"
+     }
+    },
+    {
+     "name": "Zweef",
+     "fx": "phaser",
+     "params": {
+      "rate": 0.05,
+      "depth": 0.95,
+      "mix": 0.5,
+      "feedback": 0.7
+     },
+     "divs": {
+      "rate": "8/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "F4",
+   "name": "Modulatie",
+   "presets": [
+    {
+     "name": "Klassiek koor",
+     "fx": "chorus",
+     "params": {
+      "rate": 0.8,
+      "depth": 0.45,
+      "mix": 0.5,
+      "feedback": 0.0
+     },
+     "divs": {
+      "rate": "1/2"
+     }
+    },
+    {
+     "name": "Vibrato",
+     "fx": "chorus",
+     "params": {
+      "rate": 5.0,
+      "depth": 0.3,
+      "mix": 1.0,
+      "feedback": 0.0
+     },
+     "divs": {
+      "rate": "1/16"
+     }
+    },
+    {
+     "name": "Flanger-achtig",
+     "fx": "chorus",
+     "params": {
+      "rate": 0.3,
+      "depth": 0.25,
+      "mix": 0.5,
+      "feedback": 0.75
+     },
+     "divs": {
+      "rate": "2/1"
+     }
+    },
+    {
+     "name": "Klassiek fase",
+     "fx": "phaser",
+     "params": {
+      "rate": 0.5,
+      "depth": 0.7,
+      "mix": 0.5,
+      "feedback": 0.35
+     },
+     "divs": {
+      "rate": "1/1"
+     }
+    },
+    {
+     "name": "Jet",
+     "fx": "phaser",
+     "params": {
+      "rate": 0.15,
+      "depth": 1.0,
+      "mix": 0.5,
+      "feedback": 0.85
+     },
+     "divs": {
+      "rate": "4/1"
+     }
+    },
+    {
+     "name": "Tremolo-fase",
+     "fx": "phaser",
+     "params": {
+      "rate": 4.0,
+      "depth": 0.5,
+      "mix": 0.5,
+      "feedback": 0.2
+     },
+     "divs": {
+      "rate": "1/8"
+     }
+    }
+   ]
+  },
+  {
+   "id": "F5",
+   "name": "Drive & Filter",
+   "presets": [
+    {
+     "name": "Warme band",
+     "focus": "saturation",
+     "chain": {
+      "saturation": {
+       "params": {
+        "drive": 0.45,
+        "warmth": 0.5,
+        "mix": 1.0,
+        "level": 0
+       }
+      }
+     }
+    },
+    {
+     "name": "Crunch",
+     "focus": "distortion",
+     "chain": {
+      "distortion": {
+       "params": {
+        "drive": 0.45,
+        "tone": 0.55,
+        "mix": 1.0,
+        "level": -6
+       }
+      }
+     }
+    },
+    {
+     "name": "Fuzz",
+     "focus": "distortion",
+     "chain": {
+      "distortion": {
+       "params": {
+        "drive": 0.95,
+        "tone": 0.35,
+        "mix": 1.0,
+        "level": -12,
+        "mode": 2,
+        "gate": 0.25
+       }
+      }
+     }
+    },
+    {
+     "name": "Parallel drive",
+     "focus": "distortion",
+     "chain": {
+      "distortion": {
+       "params": {
+        "drive": 0.8,
+        "tone": 0.6,
+        "mix": 0.4,
+        "level": -9
+       }
+      }
+     }
+    },
+    {
+     "name": "Donker filter",
+     "focus": "filter",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 600,
+        "reso": 0.35,
+        "rate": 0.5,
+        "depth": 0.0
+       }
+      }
+     }
+    },
+    {
+     "name": "Filter wobble",
+     "focus": "filter",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 900,
+        "reso": 0.6,
+        "rate": 2.9,
+        "depth": 0.55
+       },
+       "divs": {
+        "rate": "1/4"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "F6",
+   "name": "Ketens",
+   "presets": [
+    {
+     "name": "Dub station",
+     "focus": "tape",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 2500,
+        "reso": 0.2,
+        "rate": 0.5,
+        "depth": 0.0
+       }
+      },
+      "saturation": {
+       "params": {
+        "drive": 0.4,
+        "warmth": 0.5,
+        "mix": 1.0,
+        "level": 0
+       }
+      },
+      "tape": {
+       "params": {
+        "time": 375,
+        "feedback": 0.6,
+        "mix": 0.4,
+        "wow": 0.3
+       },
+       "divs": {
+        "time": "1/8D"
+       }
+      },
+      "reverb": {
+       "params": {
+        "decay": 2.5,
+        "tone": 0.45,
+        "mix": 0.25,
+        "predelay": 20
+       }
+      }
+     }
+    },
+    {
+     "name": "Ambient pad",
+     "focus": "reverb",
+     "chain": {
+      "chorus": {
+       "params": {
+        "rate": 0.2,
+        "depth": 0.6,
+        "mix": 0.4,
+        "feedback": 0.1
+       },
+       "divs": {
+        "rate": "4/1"
+       }
+      },
+      "tape": {
+       "params": {
+        "time": 750,
+        "feedback": 0.55,
+        "mix": 0.3,
+        "wow": 0.4
+       },
+       "divs": {
+        "time": "1/4D"
+       }
+      },
+      "reverb": {
+       "params": {
+        "decay": 9.0,
+        "tone": 0.35,
+        "mix": 0.5,
+        "predelay": 60
+       }
+      }
+     }
+    },
+    {
+     "name": "Lo-fi bas",
+     "focus": "filter",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 700,
+        "reso": 0.4,
+        "rate": 0.5,
+        "depth": 0.0
+       }
+      },
+      "saturation": {
+       "params": {
+        "drive": 0.7,
+        "warmth": 0.7,
+        "mix": 1.0,
+        "level": -2
+       }
+      }
+     }
+    },
+    {
+     "name": "Rock lead",
+     "focus": "distortion",
+     "chain": {
+      "distortion": {
+       "params": {
+        "drive": 0.7,
+        "tone": 0.6,
+        "mix": 1.0,
+        "level": -8
+       }
+      },
+      "tape": {
+       "params": {
+        "time": 420,
+        "feedback": 0.3,
+        "mix": 0.25,
+        "wow": 0.1
+       },
+       "divs": {
+        "time": "1/4"
+       }
+      },
+      "reverb": {
+       "params": {
+        "decay": 1.8,
+        "tone": 0.5,
+        "mix": 0.2,
+        "predelay": 15
+       }
+      },
+      "compressor": {
+       "params": {
+        "threshold": -22,
+        "ratio": 3,
+        "attack": 15,
+        "makeup": 4,
+        "release": 180,
+        "knee": 6,
+        "mix": 1.0,
+        "limiter": 1
+       }
+      }
+     }
+    },
+    {
+     "name": "Jet sweep",
+     "focus": "phaser",
+     "chain": {
+      "saturation": {
+       "params": {
+        "drive": 0.3,
+        "warmth": 0.3,
+        "mix": 1.0,
+        "level": 0
+       }
+      },
+      "phaser": {
+       "params": {
+        "rate": 0.15,
+        "depth": 1.0,
+        "mix": 0.5,
+        "feedback": 0.8
+       },
+       "divs": {
+        "rate": "4/1"
+       }
+      },
+      "reverb": {
+       "params": {
+        "decay": 3.0,
+        "tone": 0.5,
+        "mix": 0.25,
+        "predelay": 25
+       }
+      }
+     }
+    },
+    {
+     "name": "Acid",
+     "focus": "filter",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 500,
+        "reso": 0.85,
+        "rate": 2.9,
+        "depth": 0.5
+       },
+       "divs": {
+        "rate": "1/8"
+       }
+      },
+      "distortion": {
+       "params": {
+        "drive": 0.5,
+        "tone": 0.6,
+        "mix": 0.6,
+        "level": -8
+       }
+      },
+      "tape": {
+       "params": {
+        "time": 259,
+        "feedback": 0.35,
+        "mix": 0.25,
+        "wow": 0.05
+       },
+       "divs": {
+        "time": "1/8D"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "F7",
+   "name": "Karakter",
+   "presets": [
+    {
+     "name": "Auto-wah",
+     "focus": "filter",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 350,
+        "reso": 0.6,
+        "rate": 0.5,
+        "depth": 0,
+        "mode": 3,
+        "shape": 0,
+        "env": 0.8,
+        "drive": 0.1
+       }
+      }
+     }
+    },
+    {
+     "name": "HP wobble",
+     "focus": "filter",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 600,
+        "reso": 0.5,
+        "rate": 2,
+        "depth": 0.6,
+        "mode": 2,
+        "shape": 1,
+        "env": 0,
+        "drive": 0
+       },
+       "divs": {
+        "rate": "1/4"
+       }
+      }
+     }
+    },
+    {
+     "name": "Sample & hold",
+     "focus": "filter",
+     "chain": {
+      "filter": {
+       "params": {
+        "cutoff": 1200,
+        "reso": 0.7,
+        "rate": 4,
+        "depth": 0.7,
+        "mode": 1,
+        "shape": 3,
+        "env": 0,
+        "drive": 0.2
+       },
+       "divs": {
+        "rate": "1/16"
+       }
+      },
+      "tape": {
+       "params": {
+        "time": 375,
+        "feedback": 0.3,
+        "mix": 0.2,
+        "wow": 0.05
+       },
+       "divs": {
+        "time": "1/8D"
+       }
+      }
+     }
+    },
+    {
+     "name": "Lo-fi crush",
+     "focus": "distortion",
+     "chain": {
+      "distortion": {
+       "params": {
+        "drive": 0.3,
+        "tone": 0.45,
+        "mix": 1.0,
+        "level": -6,
+        "mode": 3,
+        "crush": 0.6,
+        "gate": 0
+       }
+      },
+      "filter": {
+       "params": {
+        "cutoff": 4000,
+        "reso": 0.2,
+        "rate": 0.5,
+        "depth": 0,
+        "mode": 1,
+        "shape": 0,
+        "env": 0,
+        "drive": 0
+       }
+      }
+     }
+    },
+    {
+     "name": "Wavefolder",
+     "focus": "distortion",
+     "chain": {
+      "distortion": {
+       "params": {
+        "drive": 0.55,
+        "tone": 0.6,
+        "mix": 0.8,
+        "level": -8,
+        "mode": 4,
+        "crush": 0.5,
+        "gate": 0
+       }
+      }
+     }
+    },
+    {
+     "name": "Gated fuzz",
+     "focus": "distortion",
+     "chain": {
+      "distortion": {
+       "params": {
+        "drive": 0.8,
+        "tone": 0.5,
+        "mix": 1.0,
+        "level": -10,
+        "mode": 2,
+        "crush": 0.5,
+        "gate": 0.45
+       }
+      },
+      "compressor": {
+       "params": {
+        "threshold": -20,
+        "ratio": 4,
+        "attack": 5,
+        "makeup": 3,
+        "release": 120,
+        "knee": 6,
+        "mix": 1.0,
+        "limiter": 1
+       }
+      }
+     }
+    },
+    {
+     "name": "Glue",
+     "focus": "compressor",
+     "chain": {
+      "compressor": {
+       "params": {
+        "threshold": -20,
+        "ratio": 2.5,
+        "attack": 30,
+        "makeup": 3,
+        "release": 250,
+        "knee": 8,
+        "mix": 1.0,
+        "limiter": 1
+       }
+      }
+     }
+    },
+    {
+     "name": "Parallel squash",
+     "focus": "compressor",
+     "chain": {
+      "saturation": {
+       "params": {
+        "drive": 0.4,
+        "warmth": 0.4,
+        "mix": 1.0,
+        "level": 0
+       }
+      },
+      "compressor": {
+       "params": {
+        "threshold": -32,
+        "ratio": 10,
+        "attack": 1,
+        "makeup": 12,
+        "release": 100,
+        "knee": 3,
+        "mix": 0.45,
+        "limiter": 1
+       }
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

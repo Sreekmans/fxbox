@@ -1,0 +1,27 @@
+[Unit]
+Description=FXBox interface (screen, encoders, buttons)
+# Starts as early as possible so the screen shows the interface quickly; it
+# waits for the engine itself and shows "Audio start…" meanwhile.
+After=local-fs.target fxbox-tune.service
+Wants=fxbox-engine.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=notify
+NotifyAccess=main
+WatchdogSec=15
+User=fxbox
+Group=fxbox
+SupplementaryGroups=video i2c gpio audio
+WorkingDirectory=/opt/fxbox/ui
+Environment=PYTHONPATH=/opt/fxbox/ui
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -m fxbox.main --hw-config /etc/fxbox/hardware.toml --data-dir /var/lib/fxbox --factory /opt/fxbox/presets/factory.json --socket /run/fxbox/engine.sock
+Nice=5
+CPUAffinity=0 1
+Restart=always
+RestartSec=1
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+FAUST Version 2.70.3
+Faust libraries as installed with this compiler (/usr/share/faust)

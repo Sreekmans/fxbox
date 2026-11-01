@@ -1,0 +1,10 @@
+engine/build/
+build/
+__pycache__/
+*.pyc
+.pytest_cache/
+install/test_dsp_on_pi.txt
+install/installed-package-versions.txt
+*.img
+*.img.xz
+*.sha256

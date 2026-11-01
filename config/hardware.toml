@@ -1,0 +1,39 @@
+# FXBox hardware configuration — Zynthian Kit V4 (ZynScreen 3.5 v1 + MCP23017).
+# Installed as /etc/fxbox/hardware.toml. Values below are taken from Zynthian's own
+# V4 profile (zynthian-sys config/zynthian_envars_V4.sh, wiring layout
+# "MCP23017_ZynScreen"); see docs/HARDWARE.md for sources.
+# Check them on your unit with:  sudo fxbox-hwtest controls
+
+[display]
+# "auto" finds the ILI9486 (fbtft) framebuffer, usually /dev/fb1.
+framebuffer = "auto"
+width = 480
+height = 320
+fps = 30
+
+[mcp23017]
+i2c_bus = 1
+address = 0x20
+gpiochip = "gpiochip0"
+# Interrupt outputs of the MCP23017, as BCM GPIO numbers.
+# Zynthian's config lists them as wiringPi pins 2 and 7, which are BCM 27 and 4.
+int_a_gpio = 27
+int_b_gpio = 4
+
+[encoders]
+# MCP23017 pin numbers: 0-7 = GPA0-GPA7, 8-15 = GPB0-GPB7
+# (Zynthian writes these as 100 + pin number).
+# Order: K1 top-left, K2 bottom-left, K3 top-right, K4 bottom-right.
+pin_a = [2, 5, 10, 13]
+pin_b = [1, 4, 9, 12]
+pin_sw = [0, 3, 8, 11]
+# Flip a knob's direction if it turns the wrong way.
+reverse = [false, false, false, false]
+# 4 = one detent per full quadrature cycle (typical), 2 = half-step encoders.
+steps_per_detent = 4
+
+[switches]
+# S1, S2, S3, S4. Zynthian lists these four extra switches as pins
+# 106, 107, 114, 115; the S1..S4 order is not documented — confirm it with
+# "sudo fxbox-hwtest controls --write".
+pins = [6, 7, 14, 15]

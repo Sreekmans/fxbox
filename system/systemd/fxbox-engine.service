@@ -1,0 +1,29 @@
+[Unit]
+Description=FXBox audio engine (effects, meters, MIDI clock)
+After=fxbox-jack.service
+Wants=fxbox-jack.service
+# Controlled restarts: at most 10 starts per 2 minutes, then the unit stays
+# failed and the screen shows "Audio-engine niet bereikbaar".
+StartLimitIntervalSec=120
+StartLimitBurst=10
+
+[Service]
+Type=notify
+NotifyAccess=main
+WatchdogSec=10
+User=fxbox
+Group=audio
+SupplementaryGroups=dialout
+EnvironmentFile=/etc/fxbox/audio.conf
+RuntimeDirectory=fxbox
+RuntimeDirectoryMode=0750
+RuntimeDirectoryPreserve=yes
+LimitRTPRIO=95
+LimitMEMLOCK=infinity
+CPUAffinity=2 3
+ExecStart=/opt/fxbox/bin/fxbox-engine --socket /run/fxbox/engine.sock --din ${DIN_DEVICE} --din-baud ${DIN_BAUD} --card ${ALSA_CARD}
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=FXBox system settings (CPU governor, no text console on the screens)
+Before=fxbox-jack.service fxbox-ui.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c 'for g in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance > "$g"; done'
+# Detach the kernel text console from all framebuffers, so no login prompt or
+# boot message can ever appear on the ZynScreen (maintenance is via SSH).
+ExecStart=/bin/sh -c 'for v in /sys/class/vtconsole/vtcon*; do grep -q "frame buffer" "$v/name" && echo 0 > "$v/bind"; done; true'
+
+[Install]
+WantedBy=multi-user.target

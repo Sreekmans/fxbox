@@ -1,0 +1,20 @@
+/* Source: https://github.com/zynthian/zynthian-sys (branch vangelis, commit c2eea576),
+ *   custom/display/ZynScreen 3.5 (v1)/boot/overlays/piscreen2r-backlight.dts
+ * Copied unchanged except for this header. License: GPL-3.0 (zynthian-sys). */
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "brcm,bcm2835";
+
+	fragment@0 {
+		target-path = "/soc";
+		__overlay__ {
+			backlight: backlight {
+				compatible = "gpio-backlight";
+				gpios = <&gpio 22 0>; /* GPIO_ACTIVE_HIGH */
+				default-on;
+			};
+		};
+	};
+};

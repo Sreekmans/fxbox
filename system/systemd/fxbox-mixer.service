@@ -1,0 +1,12 @@
+[Unit]
+Description=FXBox sound card mixer settings
+After=sound.target
+Before=fxbox-jack.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/opt/fxbox/install/fxbox-mixer.sh
+
+[Install]
+WantedBy=multi-user.target

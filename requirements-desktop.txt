@@ -1,0 +1,4 @@
+# Desktop demo only (the Raspberry Pi uses Debian packages, see install/install.sh).
+# Versions the demo was tested with:
+pycairo==1.29.2
+pygame==2.6.1
