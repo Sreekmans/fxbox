@@ -72,7 +72,7 @@ def check(cfg) -> int:
         line(False, f"scherm {fb}", "framebuffer ontbreekt (overlay piscreen2r-notouch geladen?)")
     line(os.path.exists("/dev/ttyAMA0"), "DIN-MIDI UART /dev/ttyAMA0")
     line(os.path.exists("/dev/gpiochip0"), "GPIO-chip voor MCP-interrupts")
-    print("Alles aanwezig." if ok else "Niet alles gevonden — zie docs/HANDLEIDING.md, Herstel.")
+    print("Alles aanwezig." if ok else "Niet alles gevonden — zie docs/MANUAL.nl.md, Herstel.")
     return 0 if ok else 1
 
 

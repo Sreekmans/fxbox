@@ -23,4 +23,4 @@ echo "Instellingen: ${SAMPLE_RATE} Hz, periode ${PERIOD} x ${NPERIODS}"
 tail -n 5 /tmp/fxbox-iodelay.txt
 echo
 echo "De regel 'total roundtrip latency' is de gemeten vertraging van ingang naar uitgang."
-echo "Noteer de waarde in docs/TESTRAPPORT.md (sectie: metingen op het toestel)."
+echo "Noteer de waarde in docs/TEST_REPORT.nl.md (sectie: metingen op het toestel)."
