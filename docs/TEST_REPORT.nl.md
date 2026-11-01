@@ -1,5 +1,7 @@
 # Testrapport
 
+[English](TEST_REPORT.md) · **Nederlands**
+
 Stand: 01-11-2026, versie 1.2.0 (filtertypes en pagina 2, distortiontypes met 2× oversampling, compressor/limiter aan het einde van de keten).
 
 **Op de echte hardware zijn inmiddels de installatie, hardwareherkenning, scherm, bediening en een eerste DSP-meting gedaan (zie onderaan); de overige punten staan nog open.** Alle tests hieronder draaiden op een ontwikkelmachine (x86-64, Ubuntu 24.04) en voor ARM64 onder emulatie (qemu). Er zijn dus nog geen hardwaretests gedaan en er is geen werkende audio, gemeten latentie of opstarttijd op het toestel vastgesteld. Het installatiescript voert de engine- en interfacetests ook op de Pi zelf uit. De uitvoer daarvan komt in `install/test_dsp_on_pi.txt`.

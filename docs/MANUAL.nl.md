@@ -1,5 +1,7 @@
 # FXBox — handleiding
 
+[English](MANUAL.md) · **Nederlands**
+
 Aanzetten, instrument aansluiten, preset kiezen en spelen. Deze handleiding beschrijft de installatie, de bediening en wat je doet als er iets misgaat.
 
 ## 1. Wat je nodig hebt

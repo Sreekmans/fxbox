@@ -1,5 +1,7 @@
 # Architectuur en technische keuzes
 
+[English](ARCHITECTURE.md) · **Nederlands**
+
 ## Overzicht
 
 ```

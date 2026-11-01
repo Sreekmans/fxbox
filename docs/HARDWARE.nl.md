@@ -1,5 +1,7 @@
 # Hardwareconfiguratie en bronnen
 
+[English](HARDWARE.md) · **Nederlands**
+
 Alle waarden komen uit Zynthians eigen configuratie voor de V4-kit. Niets is geraden; wat niet uit de bronnen vast te stellen is, staat onderaan bij "Te bevestigen op het toestel". Hardware-instellingen staan los van de code in `/etc/fxbox/hardware.toml` en `/etc/fxbox/audio.conf`.
 
 Bronnen (geraadpleegd 31-10-2026):

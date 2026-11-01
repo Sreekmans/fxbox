@@ -1,5 +1,7 @@
 # FXBox
 
+[English](README.md) · **Nederlands**
+
 FXBox maakt van een Zynthian Kit V4 (Raspberry Pi 4) een zelfstandige multi-effectbak voor externe instrumenten. Het toestel heeft geen Zynthian-software nodig, en ook geen computer, browser of internet tijdens het spelen.
 
 ```
@@ -28,7 +30,7 @@ instrument → ingang → Filter → Saturation → Distortion → Chorus → Ph
 
 ## Snel aan de slag
 
-- **Op het toestel:** zie [docs/HANDLEIDING.md](docs/HANDLEIDING.md). Kort samengevat: Raspberry Pi OS Lite 64-bit (Bookworm) op een kaart zetten, `sudo ./install/install.sh` uitvoeren en herstarten.
+- **Op het toestel:** zie [docs/MANUAL.nl.md](docs/MANUAL.nl.md). Kort samengevat: Raspberry Pi OS Lite 64-bit (Bookworm) op een kaart zetten, `sudo ./install/install.sh` uitvoeren en herstarten.
 - **Kant-en-klaar image:** `sudo ./install/build-image.sh --user NAAM --xz` bouwt op een Linux-pc een flashbaar `.img` met FXBox erin (handleiding §3b).
 - **Desktopdemo** (Linux of macOS, Python 3.11 of nieuwer):
 
@@ -49,10 +51,10 @@ instrument → ingang → Filter → Saturation → Distortion → Chorus → Ph
 
 ## Documentatie
 
-- [Handleiding](docs/HANDLEIDING.md): installatie, bediening en herstel
-- [Architectuur](docs/ARCHITECTUUR.md): technische keuzes en vastgelegd gedrag
-- [Hardware](docs/HARDWARE.md): aansluitingen, instellingen en bronnen
-- [Testrapport](docs/TESTRAPPORT.md): wat getest is en wat nog op het toestel gecontroleerd moet worden
+- [Handleiding](docs/MANUAL.nl.md): installatie, bediening en herstel
+- [Architectuur](docs/ARCHITECTURE.nl.md): technische keuzes en vastgelegd gedrag
+- [Hardware](docs/HARDWARE.nl.md): aansluitingen, instellingen en bronnen
+- [Testrapport](docs/TEST_REPORT.nl.md): wat getest is en wat nog op het toestel gecontroleerd moet worden
 
 ## Licentie
 
